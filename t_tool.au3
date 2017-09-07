@@ -37,7 +37,7 @@ Dim $TestKnapp = 0 ; Sett verdi til 1 for å vise knappen
 
 ;Decl.
 Dim $SWName = "T-Tool"
-Dim $SWVersion = "1.5.4.5"
+Dim $SWVersion = "1.5.4.6"
 Dim $SWStable = "Unstable"
 Dim $i
 Dim $Sandbox
@@ -1129,7 +1129,15 @@ Func EventLog()
  EndFunc
 
  Func DelTemp()
+	ProgressOn($SWName,"","Sletter %temp%")
 	runWait(@comSpec & ' /c DEL /F /S /Q %TEMP%',@ScriptDir,@SW_HIDE)
+	  ProgressSet(25,"Sletter .tmp filer")
+	  runWait(@comSpec & ' /c DEL C:\*.tmp /S /Q',@ScriptDir,@SW_HIDE)
+		 ProgressSet(50,"Sletter området %tmp%")
+		 runWait(@comSpec & ' /c DEL %tmp% /S /Q',@ScriptDir,@SW_HIDE)
+			ProgressSet(75,"Sletter området %temp%")
+			runWait(@comSpec & ' /c DEL %temp% /S /Q',@ScriptDir,@SW_HIDE)
+   ProgressOff()
 EndFunc
 
 Func WideSN()
