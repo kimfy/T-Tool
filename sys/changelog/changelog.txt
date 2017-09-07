@@ -1,0 +1,173 @@
+Versjon 1.5.4.5 - 07.09.2017 - Olai Wanvik
+Ny kode for å hente inn IP da den trøbblet om maskina hadde 2 nic
+
+Versjon 1.5.4.4 - 07.09.2017 - Olai Wanvik
+FindUser oppdatert til v.1.1
+Ny kode til DelTemp
+
+Versjon 1.5.4.3 - 06.09.2017 - Olai Wanvik
+Funksjon for å finne brukernavn om scriptet blir kjørt av annen bruker lagt til.
+FindUser v1.0
+
+Versjon 1.5.4.2 - 06.09.2017 - Olai Wanvik
+Loadingbar lagt til i build
+
+Versjon 1.5.4.1 - 06.09.2017 - Olai Wanvik
+Get-DNS funksjon lagt til
+
+Versjon 1.5.4 - 04.09.2017 - Olai Wanvik
+Større GUI endring
+
+Versjon 1.5.3.8 - 04.09.2017 - Olai Wanvik
+Knapp og funksjon for å skjule/vise skjulte mapper
+
+Versjon 1.5.3.7 - 04.09.2017 - Olai Wanvik
+Knapp og funksjon for å skjule/vise kjente filtyper
+
+Versjon 1.5.3.6 - 04.09.2017 - Olai Wanvik
+Rettet feil hvor Msgbox meldte at GPUpdate var ferdig før den hadde startet.
+Feil i ATS forsøkt rettet. ATS lagt inn i beta. Trenger tilbakemelding på denne.
+
+Versjon 1.5.3.5 - 31.08.2017 - Olai Wanvik
+Flere endringer i GUIkode, Små endringer i GUI generelt.
+
+Versjon 1.5.3.1 - 31.08.2017 - Olai Wanvik
+Forbedring lagt til ift. windowsversjon.
+Versjonsnummer lagt til i tittel-label
+
+Versjon 1.5.3 - 31.08.2017 - Olai Wanvik
+En hel rekke forbedringer i GUI. Ryttet i GUI-kode.
+PC type lagt til. Funksjon for å lese ut utvidet PC type info lagt til.
+
+Versjon 1.5.2.6 - 25.08.2017 - Olai Wanvik
+GUI Utvidet fra 410 til 430 px
+
+Versjon 1.5.2.5 - 25.08.2017 - Olai Wanvik
+Knapp for å dreve onedrive.exe lagt til
+
+Verjson 1.5.2 - 25.08.2017 - Olai Wanvik
+Utvidet sjekk av dc og nettverk ift. kontakt med DC i TH.
+
+Versjon 1.5.1 - 24.08.2017 - Olai Wanvik
+Sjekk om maskina ligger i Torghatten domenet lagt inn
+
+Versjon 1.5.0 - 17.08.2017 - Olai Wanvik
+
+Rettet feil i AddTrustedSites. Små endringer i GUI ift. serienummerfix i v.1.4.9.5
+
+Versjon 1.4.9.9 - 07.08.2017 - Olai Wanvik
+
+Knapp for å åpne Hostfil lagt til.
+
+
+Versjon 1.4.9.5 - 07.08.2017 - Olai Wanvik
+
+Funksjon for å utvide GUI om serienummer er for langt lagt til.
+
+
+
+Versjon 1.4.9 - 07.08.2017 - Olai Wanvik
+
+Knapp for å slette temp lagt inn, men funksjon ikke testet grundig nok.
+
+
+
+Versjon 1.4.8 - 07.08.2017 - Olai Wanvik
+
+Rettet en større feil hvor AddTrustedSites ikke registrerte endringer i hostfila.
+
+
+
+Versjon 1.4.7 - 28.07.2017 - Olai Wanvik
+Eventlog V1.1, Opprett sak lagt til. "mailto support"
+
+Versjon 1.4.6 - 27.07.2017 - Olai Wanvik
+Eventlog V1.0
+
+Versjon 1.4.5 - 27.07.2017 - Olai Wanvik
+Teamviewer lenker
+Mindre skjulte GUI endringer.
+
+Versjon 1.4.4 - 27.07.2017 - Olai Wanvik
+Resync time og GodMode lagt inn.
+
+Versjon 1.4.3 - 27.07.2017 - Olai Wanvik
+Safemode lagt til. Safemode deaktiverer funksjoner som er lagt inn på sperreliste.
+Safemode må deaktiveres før funksjonene kan kjøres. 
+
+Versjon 1.4.2 - 26.07.2017 - Olai Wanvik
+Mulighet til å kjøre funksjoner i beta-modus lagt inn.
+
+Versjon 1.4.1 - 26.07.2017 - Olai Wanvik
+Skjult testknapp lagt inn i GUI. Kan kun brukes i debug.
+Mindre GUI endringer i meny.
+
+Versjon 1.4.0 - 26.07.2017 - Olai Wanvik
+Mindre endring i AddTrustedSites for visning av brukernavn under wizard.
+Brukernavn vises nå i GUI. 
+Controls lagt til: Registry,WindowsUpdate,DevicesAndPrinters,WindowsFirewall
+Bug i GetLastRebootTime rettet.
+Laget ny måte å hente inn maskinas IP-adresse helt fra bunnen av.
+
+Versjon 1.3.9 - 24.07.2017 - Olai Wanvik
+Office365 Repair v.1.1 update
+
+Versjon 1.3.8 - 24.07.2017 - Olai Wanvik
+Sjekk av portabel modus lagt inn
+
+Versjon 1.3.7 - 24.07.2017 - Olai Wanvik
+Office365 reparasjon v1.0 lagt til. Ikke testet
+
+Versjon 1.3.6 - 24.07.2017 - Olai Wanvik
+ResourceMonitor og TaskManager lagt til
+
+Versjon 1.3.5 - 24.07.2017 - Olai Wanvik
+Legitimasjonsbehandling lagt til
+
+Versjon 1.3.4 - 24.07.2017 - Olai Wanvik
+Windows versjon hentes nå ut som hostinventory.
+Mindre GUI endringer.
+
+Versjon 1.3.3 - 24.07.2017 - Olai Wanvik
+Mulighet for å lage snarveier til kjente nettsider på skrivebord lagt til.
+
+Versjon 1.3.2 - 21.07.2017 - Olai Wanvik
+Report error fuksjon lagt til
+
+Versjon 1.3.1 - 21.07.2017 - Olai Wanvik
+Lenker lagt til
+
+Versjon 1.3 - 17.07.2017 - Olai Wanvik - Major update
+Funksjoner lagt til: Controls - Stømalternativer, AppWiz,INEt,Lusrmgr, DeviceManager, EventViewer, TaskScheduler
+GetLastBootTime, GetOSInstallDate
+Små GUI endringer. 
+
+Versjon 1.2 - 17.07.2017 - Olai Wanvik
+Killswitch lagt inn
+
+Versjon 1.1.2 - 17.07.2017 - Olai Wanvik
+WindowsUpdateFix oppdatert til 2.3 - Workaround for portable mode.
+Skriptet kjører nå ferdig selv om T-Tool kjører uten \sys\*
+
+Versjon 1.1.2 - 17.07.2017 - Olai Wanvik
+WindowsUpdateFix oppdatert til 2.2 - major bugfix.
+
+Versjon 1.1.2 - 17.07.2017 - Olai Wanvik
+Fjernet Sandbox-mode fra AddTrustedSite. 
+Lagt til WindowsUpdateFix 2.1.
+
+Versjon 1.1.1 - 03.07.2017 - Olai Wanvik
+Retter problem med å pinge nettsider.
+
+Versjon 1.1 - 03.07.2017 - Olai Wanvik
+La til funksjonene: shutdown, reboot, open changelog, gpupdate, deletecreds, ping, disable faststartup, flush dns cache, sandbox, RenewIP, GPResult,
+-----
+DeleteCredsFunc() er ikke testet.
+Må testes på maskin med problemer da den kjører delete:Microsoft*
+-----
+DisalbeFastStartupFunc()
+Trenger refresh av kontrollpanel før den vises.
+-----
+Sandbox - 
+Sandbox gjør at hele skriptet kjører i en stor "if". Om man setter Sandbox til Yes kjøres kun utvalgte funksjoner ved oppstart
+-----

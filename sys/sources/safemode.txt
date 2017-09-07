@@ -1,0 +1,2 @@
+Verdien på linje 2 setter safemode av eller på. 1 for på 0 for å deaktivere.
+safemode: 0
