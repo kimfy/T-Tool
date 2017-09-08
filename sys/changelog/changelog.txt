@@ -1,3 +1,6 @@
+Versjon 1.5.4.8 - 08.09.2017 - Olai Wanvik
+Hotfix på sjekk av IP
+
 Versjon 1.5.4.7 - 08.09.2017 - Olai Wanvik
 Forbedring gjort i innhenting av vendor.
 Mulighet for å kjøre "run" kommandoer lagt til i gui

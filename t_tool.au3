@@ -1,5 +1,5 @@
 ;T-Tool
-#RequireAdmin
+;#RequireAdmin
 ; Kommenter ut #RequireAdmin for å ikke bli spurt om admin under testing. NB må være med på release
 #include <Icons.au3>
 #include <Date.au3>
@@ -37,7 +37,7 @@ Dim $TestKnapp = 0 ; Sett verdi til 1 for å vise knappen
 
 ;Decl.
 Dim $SWName = "T-Tool"
-Dim $SWVersion = "1.5.4.7"
+Dim $SWVersion = "1.5.4.8"
 Dim $SWStable = "Unstable"
 Dim $i
 Dim $Sandbox
@@ -993,6 +993,7 @@ Func GetNSIP()
 	 ; MsgBox(0,$SWName,$NSIP,5)
 
 	  If $NSIP = "" Then $NSIP = @IPAddress1
+		 If StringIsAlpha($NSIP) = 0 Then $NSIP = @IPAddress1
 		 GUICtrlSetData($IPAddress,"IP Adresse: "&$NSIP)
    EndFunc
 
@@ -1268,7 +1269,7 @@ Else
 EndIf
 
 EndFunc
-
+StringIsAlNum(
 Func FindUser() ;v1.1
    ;Her sjekker skriptet om brukernavn matcher brukernavnet i scriptdirpath
    $i = 0
