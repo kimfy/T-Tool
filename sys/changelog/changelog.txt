@@ -1,3 +1,8 @@
+Versjon 1.5.4.7 - 08.09.2017 - Olai Wanvik
+Forbedring gjort i innhenting av vendor.
+Mulighet for å kjøre "run" kommandoer lagt til i gui
+Knapp for CMD lagt til under tools
+
 Versjon 1.5.4.6 - 07.09.2017 - Olai Wanvik
 Større forbedring i DelTemp.
 

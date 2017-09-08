@@ -37,7 +37,7 @@ Dim $TestKnapp = 0 ; Sett verdi til 1 for å vise knappen
 
 ;Decl.
 Dim $SWName = "T-Tool"
-Dim $SWVersion = "1.5.4.6"
+Dim $SWVersion = "1.5.4.7"
 Dim $SWStable = "Unstable"
 Dim $i
 Dim $Sandbox
@@ -69,6 +69,7 @@ Dim $DNSReadLine
 Dim $DNSPrim
 Dim $DNSSec
 Dim $DirUser
+Dim $RunInput
 
 ;GUI Variabler
 Dim $GUIStatus = 0 ; $GUIStatus settes til 1 i Post-GUI
@@ -185,7 +186,8 @@ $MenuOutlookSafemode = GUICtrlCreateMenuItem("Start Outlook i Safemode",$MenuToo
 $MenuResyncTime = GUICtrlCreateMenuItem("Resync klokke",$MenuTools)
 $MenuGodMode = GUICtrlCreateMenuItem("GodMode",$MenuTools)
 $MenuGetDNS = GUICtrlCreateMenuItem("Get DNS",$MenuTools)
-
+$MenuRepOffice = GUICTrlCreateMenuItem("Office 365 Reparasjon",$MenuTools)
+$MenuCMD = GUICtrlCreateMenuItem("CMD",$MenuTools)
 
 ;Tools - System -
 $MenuShutdown = GUICtrlCreateMenuItem("Shutdown",$MenuSystem)
@@ -242,7 +244,7 @@ $BTN_GPUPDATE = GUICtrlCreateButton("GPUpdate", $BTN_Left_Row1, 5, $BTN_Width, 3
 $BTN_ATS = GUICtrlCreateButton("AddTrustedSite", $BTN_Left_Row1, 45, $BTN_Width, 35)
 $BTN_PING = GUICtrlCreateButton("Ping", $BTN_Left_Row1, 85, $BTN_Width, 35)
 $BTN_WUAU = GUICtrlCreateButton("Windows Update Fix", $BTN_Left_Row1, 125, $BTN_Width, 35)
-$BTN_RepOffice = GUICtrlCreateButton("Office365 reparasjon", $BTN_Left_Row1, 165, $BTN_Width, 35)
+$BTN_RUN = GUICtrlCreateButton("Run", $BTN_Left_Row1, 165, $BTN_Width, 35)
 $BTN_ResMon = GUICtrlCreateButton("Ressursovervåkning", $BTN_Left_Row1, 205, $BTN_Width, 35)
 $BTN_TaskMgr = GUICtrlCreateButton("Oppgavebehandling", $BTN_Left_Row1, 245, $BTN_Width, 35)
 $BTN_OpprettSak = GUICtrlCreateButton("Opprett sak",$BTN_Left_Row2,5,$BTN_Width,35)
@@ -410,7 +412,7 @@ While 1
 			KillTTool()
 		 Case $BTN_WUAU
 			WindowsUpdateFixFunc()
-		 Case $BTN_RepOffice
+		 Case $MenuRepOffice
 			BetaMode()
 			If $BetaCheck = "Yes" then RepairOffice365()
 		 Case $MenuPowerCfg
@@ -502,6 +504,10 @@ While 1
 			   ShowHideFolders()
 		 Case $MenuGetDNS
 			   GetDNS()
+		 Case $BTN_RUN
+			   RunCommand()
+		 Case $MenuCMD
+			   CMD()
 
 		 Case $BTN_Test
 			;Bruk denne knappen til å teste funksjoner. Sett $TestKnapp til 1 for å vise knappen
@@ -1059,13 +1065,11 @@ EndFunc
 
 Func SafemodeApps()
    If $Safemode = 1 Then
-	  GUICtrlSetState($BTN_RepOffice,$GUI_DISABLE)
 		 GUICtrlSetState($MenuDeleteCreds,$GUI_DISABLE)
 			GUICtrlSetState($BTN_DelTemp,$GUI_DISABLE)
 
 
    Else
-	  GUICtrlSetState($BTN_RepOffice,$GUI_ENABLE)
 		 GUICtrlSetState($MenuDeleteCreds,$GUI_ENABLE)
 			GUICtrlSetState($BTN_DelTemp,$GUI_ENABLE)
 
@@ -1179,6 +1183,7 @@ Func GetComputerModel()
    $Vendor = StringStripWS($Vendor,$STR_STRIPALL)
    $VendorVersion = FileReadLine(@tempDir&"\csproduct.txt",4)
    $VendorVersion = StringStripWS($VendorVersion,$STR_STRIPALL)
+   $Vendor = StringReplace($Vendor,"FUJITSU","HP Rebrand")
    $ComputerModelnumber = FileReadLine(@tempDir&"\computersystemMM.txt",2)
    $ComputerModelnumber = StringStripWS($ComputerModelnumber,$STR_STRIPALL)
 
@@ -1284,4 +1289,18 @@ Func FindUser() ;v1.1
    EndIf
 $i = 0
    EndIf
+EndFunc
+
+Func RunCommand()
+$RunInput = InputBox($SWName,"skriv inn kommando")
+If @error = 1 Then
+   ""
+Else
+ShellExecute($RunInput)
+EndIf
+
+EndFunc
+
+Func CMD()
+   RunWait("cmd.exe")
 EndFunc
