@@ -70,4 +70,4 @@ Function ValidatePath {
 }
 
 Pre -Verbose
-Build -VerboseFunction ValidatePath
+Build -Verbose
