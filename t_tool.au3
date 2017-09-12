@@ -1,7 +1,7 @@
-;T-Tool
+﻿;T-Tool
 #RequireAdmin
 ; Kommenter ut #RequireAdmin for å ikke bli spurt om admin under testing. NB må være med på release
-#include <Icons.au3>
+#include <lib\Icons.au3>
 #include <Date.au3>
 #include <File.au3>
 #include <Misc.au3>
